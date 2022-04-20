@@ -29,13 +29,13 @@
             //Variavel que armazena um codigo de criação do Banco de Dados
             $bd = "CREATE DATABASE if NOT EXISTS $nomebd";
 
-            //A função mysqli_query(), identifica a conexão com o Banco de Dados
+            //A função mysql_query(), identifica a conexão com o Banco de Dados
             //E logo após a consulta SQL da $bd 
             mysql_query($conexao,$bd);
             echo 'Banco de dados criado com sucesso';
             echo "<br>";
             
-            //Selecionando o Banco de Dados atraves da função mysqli_select_db()
+            //Selecionando o Banco de Dados atraves da função mysql_select_db()
             mysql_select_db($conexao,$nomebd);
             echo 'Banco de dados ' . $nomebd . ' selecionado';
 
@@ -47,7 +47,7 @@
                 foto varchar(100) not null
                 ) ENGINE = MYISAM";
 
-            //A função mysqli_query(), identifica a conexão com o Banco de Dados
+            //A função mysql_query(), identifica a conexão com o Banco de Dados
             //E logo após a consulta SQL da $tabela
             mysql_query($conexao,$tabela);
 
